@@ -1,4 +1,4 @@
-package com;
+package KMPSource;
 
 /**
  * Created by juming.wang on 2015/12/21.
