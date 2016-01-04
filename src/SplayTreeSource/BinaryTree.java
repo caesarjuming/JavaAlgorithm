@@ -191,7 +191,7 @@ public class BinaryTree {
         }
     }
         
-    /** Perform a binary tree rotation about this node's
+    /** Perform FibonacciHeap binary tree rotation about this node's
         parent... that is, replace the parent with this node and move
         the affected children so the binary search tree property is
         maintained. */

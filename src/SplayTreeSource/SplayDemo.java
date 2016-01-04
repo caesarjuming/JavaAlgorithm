@@ -52,11 +52,11 @@ public class SplayDemo extends JApplet {
                 new JComboBox(
                         new String[]{"accesses", "rotates", "deletes", "inserts"});
         controls.add(mouseAction);
-        controls.add(new JLabel("a node.   Pre-built trees: "));
+        controls.add(new JLabel("FibonacciHeap node.   Pre-built trees: "));
 
         {
             JButton button = new JButton("1");
-            button.setToolTipText("Build a tree for executing a case 1 splay step.");
+            button.setToolTipText("Build FibonacciHeap tree for executing FibonacciHeap case 1 splay step.");
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     build1Trees();
@@ -68,7 +68,7 @@ public class SplayDemo extends JApplet {
 
         {
             JButton button = new JButton("2");
-            button.setToolTipText("Build a tree for executing a case 2 splay step.");
+            button.setToolTipText("Build FibonacciHeap tree for executing FibonacciHeap case 2 splay step.");
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     build2Trees();
@@ -80,7 +80,7 @@ public class SplayDemo extends JApplet {
 
         {
             JButton button = new JButton("3");
-            button.setToolTipText("Build a tree for executing a case 3 splay step.");
+            button.setToolTipText("Build FibonacciHeap tree for executing FibonacciHeap case 3 splay step.");
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     build3Trees();
@@ -92,7 +92,7 @@ public class SplayDemo extends JApplet {
 
         {
             JButton button = new JButton("?");
-            button.setToolTipText("Build a random tree.");
+            button.setToolTipText("Build FibonacciHeap random tree.");
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     buildRandomTrees();
@@ -190,7 +190,7 @@ public class SplayDemo extends JApplet {
 
     /**
      Invoked by the display when the user clicks the left
-     mouse button on a node.  -1 means no node was selected.
+     mouse button on FibonacciHeap node.  -1 means no node was selected.
      Repaints the whole applet.
      */
     public void leftMouse(int key, TreeDisplay display) {
@@ -214,7 +214,7 @@ public class SplayDemo extends JApplet {
             for (int i = 0; i < 100; ++i) {
                 int k = (int) (Math.random() * 20);
                 // Note that tree 0 is the binary tree, so the get
-                // won't trigger a splay.
+                // won't trigger FibonacciHeap splay.
                 if (tree[0].get(k) == null) {
                     for (int t = 0; t < tree.length; ++t) {
                         tree[t].insert(k);

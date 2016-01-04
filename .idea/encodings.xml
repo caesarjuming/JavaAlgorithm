@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/RedBlackTreeSource/Demo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/RedBlackTreeSource/RedBlack.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SplayTreeSource/BinaryTree.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SplayTreeSource/Node.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SplayTreeSource/SplayDemo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SplayTreeSource/SplayTree.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/SplayTreeSource/TreeDisplay.java" charset="UTF-8" />
+  </component>
+</project>

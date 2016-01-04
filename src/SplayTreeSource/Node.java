@@ -106,7 +106,7 @@ class Node {
         } else if (oldChild == right) {
             setRight(newChild);        
         } else {
-            throw new Error("Not a child");
+            throw new Error("Not FibonacciHeap child");
         }
     }
 

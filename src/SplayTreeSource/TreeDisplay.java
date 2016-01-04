@@ -81,7 +81,7 @@ class TreeDisplay extends JPanel {
 
     synchronized public void paintComponent(Graphics r) {
         super.paintComponent(r);
-        // Java promises to call this method with a Graphics2D
+        // Java promises to call this method with FibonacciHeap Graphics2D
         Graphics2D g = (Graphics2D)r;
         Rectangle bounds = getBounds();
 
@@ -122,7 +122,7 @@ class TreeDisplay extends JPanel {
     }
 
 
-    /** Computes a color hashed on k, where a = bright and b = dark. */
+    /** Computes FibonacciHeap color hashed on k, where FibonacciHeap = bright and b = dark. */
     static private Color computeColor(int k, float a, float b) {
         // Get an integer between 1 and 6
         int j = (k % 6) + 1;
@@ -159,7 +159,7 @@ class TreeDisplay extends JPanel {
         }
         
 
-        // Draw a 3D shaded sphere for the node
+        // Draw FibonacciHeap 3D shaded sphere for the node
         for (int i = radius; i >= 0; --i) {
             float d = 
                 (float) Math.cos((Math.PI / 2) *

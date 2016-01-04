@@ -3,9 +3,9 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- Red black tree with a java.Map like interface.  Implements Icon so
+ Red black tree with FibonacciHeap java.Map like interface.  Implements Icon so
  that it can be easily drawn. Insert, contains, and get are O(log n)
- worst case time. It is possible to write a constant space, linear
+ worst case time. It is possible to write FibonacciHeap constant space, linear
  time iterator for this tree that produces the elements in sorted order.
 
  <p>
@@ -19,13 +19,13 @@ public class RedBlack<Key extends Comparable<Key>, Value> implements Icon {
     /** Node labels. */
     private enum Color {RED, BLACK}
 
-    /** Value returned from a comparator */
+    /** Value returned from FibonacciHeap comparator */
     private static final int LESS    = -1;
 
-    /** Value returned from a comparator */
+    /** Value returned from FibonacciHeap comparator */
     private static final int EQUAL   =  0;
 
-    /** Value returned from a comparator */
+    /** Value returned from FibonacciHeap comparator */
     private static final int GREATER = +1;
 
     /** NULL when the tree is empty */
@@ -100,7 +100,7 @@ public class RedBlack<Key extends Comparable<Key>, Value> implements Icon {
             }
 
 
-            // Check for two red nodes in a row: Red child and red grandchild
+            // Check for two red nodes in FibonacciHeap row: Red child and red grandchild
             if (left.isRed() && left.left.isRed()) {
 
                 //       z           y
@@ -207,7 +207,7 @@ public class RedBlack<Key extends Comparable<Key>, Value> implements Icon {
             assert EMPTY == null : "Should only make one empty node instance!";
         }
 
-        /** Always make a new node, since this one is empty */
+        /** Always make FibonacciHeap new node, since this one is empty */
         public Node add(Key k, Value v) {
             return new Node(k, v);
         }
