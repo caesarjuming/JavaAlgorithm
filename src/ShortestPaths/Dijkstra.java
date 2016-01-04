@@ -3,6 +3,8 @@ package ShortestPaths;
 /**
  * Created by juming.wang on 2015/12/30.
  */
+
+//单源最短路径
 public class Dijkstra {
 
     public void GetDijkstraPath(MGraph g,int [] path,int []dist,int Who){
