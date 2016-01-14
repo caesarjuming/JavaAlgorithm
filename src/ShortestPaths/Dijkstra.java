@@ -11,41 +11,49 @@ public class Dijkstra {
         boolean []visited=new boolean[MGraph.N];
         //initialize
         for (int i=0;i<MGraph.N;i++){
+            // 两点之间有线段，且不是环
             if(g.getMatrix(Who,i)>0&&i!=Who){
+                //原点到i点的路径长度，更新为两点之间直接的长度
                 dist[i]=g.getMatrix(Who,i);
+                //路径为原点
                 path[i]=Who;
-
             }else{
+                //两点不相连，设为无限大
                 dist[i]=Integer.MAX_VALUE;
+                //路径为-1,表示不经过
                 path[i]=-1;
             }
+            //初始化设置，所有节点都未访问过，路径所经过的
             visited[i]=false;
-            path[Who]=Who;
-            dist[Who]=0;
-
         }
+        //设置原点访问路径为自己
+        path[Who]=Who;
+        dist[Who]=0;
+
         visited[Who]=true;
         //find the min value
         int MIN=Integer.MAX_VALUE;
         int m=-1;
-        for(int j=1;j<MGraph.N;j++){
 
+        //遍历n-1次
+        for(int j=1;j<MGraph.N;j++){
             m=-1;
+            //寻找原点到其他节点中最小距离
             for(int k=0;k<MGraph.N;k++){
                 if(visited[k]==false&&dist[k]<MIN){
                   m=k;
                   MIN=dist[k];
                 }
             }
-        }
-        // union find
-        for(int l=1;l<MGraph.N;l++){
-            if(visited[l]==false&&g.getMatrix(m,l)+MIN<dist[l]){
-                dist[l]=g.getMatrix(m,l)+MIN;
-                path[l]=m;
+            //上面寻找的最小距离+原点到此点的距离<原点到此点的距离
+            //更新最小距离表，增加路径
+            for(int l=0;l<MGraph.N;l++){
+                if(visited[l]==false&&g.getMatrix(m,l)+MIN<dist[l]){
+                    dist[l]=g.getMatrix(m,l)+MIN;
+                    path[l]=m;
+                }
             }
         }
-
     }
 }
 
