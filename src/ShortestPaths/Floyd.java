@@ -19,12 +19,14 @@ public class Floyd {
         }
 
         for (k = 0; k < DGraph.N; k++) {
-            for (i = 0; i < DGraph.N; i++)
-                for (j = 0; j < DGraph.N; j++)
+            for (i = 0; i < DGraph.N; i++) {
+                for (j = 0; j < DGraph.N; j++) {
                     if (A[i][j] > (A[i][k] + A[k][j])) {
                         A[i][j] = A[i][k] + A[k][j];
                         path[i][j] = k;
                     }
+                }
+            }
         }
     }
 }

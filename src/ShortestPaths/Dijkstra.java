@@ -32,11 +32,11 @@ public class Dijkstra {
 
         visited[Who]=true;
         //find the min value
-        int MIN=Integer.MAX_VALUE;
         int m=-1;
 
         //遍历n-1次
         for(int j=1;j<MGraph.N;j++){
+            int MIN=Integer.MAX_VALUE;
             m=-1;
             //寻找原点到其他节点中最小距离
             for(int k=0;k<MGraph.N;k++){
